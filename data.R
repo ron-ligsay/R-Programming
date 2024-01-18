@@ -26,10 +26,19 @@ names(new_data) <- c("ID","Color","Boolean")
 map_data <- data.frame(
   ID = c(5),
   Color = c('Blue'),
-  Booelan = c(TRUE)
+  Boolean = c(TRUE)
     )
 
 # combine dataframe
-new_data
+new_data <- rbind(map_data, new_data)
 
+sale_data <- data.frame(
+  ID = c(6),
+  Color = c('Violet'),
+  Boolean = c(FALSE)
+)
+new_data <- rbind(new_data,sale_data)
 
+# removing column
+new_data <- new_data[new_data$Color != "Blue",]
+new_data <- new_data[new_data$Boolean != FALSE,]
