@@ -42,3 +42,24 @@ new_data <- rbind(new_data,sale_data)
 # removing column
 new_data <- new_data[new_data$Color != "Blue",]
 new_data <- new_data[new_data$Boolean != FALSE,]
+
+#
+
+
+# Remove the "Color" column using subset
+new_data <- subset(new_data, select = -Color)
+
+# Remove the "Color" column using indexing
+new_data <- new_data[, -which(names(new_data) == "Boolean")]
+
+sales_data <- data.frame(
+  Product =c("Product1","Product2","Product3","Product4"),
+  Sales = c(120,85,150,190)
+)
+new_sales_data <- data.frame(
+  Product =c("Product5","Product5"),
+  Sales = c(120,85)
+)
+
+sales_data <- rbind(sales_data, new_sales_data)
+View(sales_data)
