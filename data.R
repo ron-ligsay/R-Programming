@@ -22,3 +22,14 @@ f <- c(TRUE,TRUE,TRUE,FALSE)
 new_data <- data.frame(d,e,f)
 View(new_data)
 names(new_data) <- c("ID","Color","Boolean")
+
+map_data <- data.frame(
+  ID = c(5),
+  Color = c('Blue'),
+  Booelan = c(TRUE)
+    )
+
+# combine dataframe
+new_data
+
+
