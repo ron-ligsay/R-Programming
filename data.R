@@ -63,3 +63,23 @@ new_sales_data <- data.frame(
 
 sales_data <- rbind(sales_data, new_sales_data)
 View(sales_data)
+
+
+high_sales_data <- sales_data[sales_data$Sales > 120,]
+View(high_sales_data)
+
+install.packages("ggplot2")
+library(ggplot2)
+
+
+ggplot(sales_data, aes(x = Product, y = Sales, fill = Product)) +
+  geom_bar(stat = "identity") + 
+  labs(title = "Product Sales", x="Product",y="Sales") +
+  theme_minimal()
+
+ggplot(high_sales_data, aes(x = Product, y = Sales, fill = Product)) +
+  geom_bar(stat = "identity") + 
+  labs(title = "Product Sales", x="Product",y="Sales") +
+  theme_minimal()
+
+
