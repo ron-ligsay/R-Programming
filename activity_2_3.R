@@ -1,3 +1,13 @@
+ID <- c(1:12)
+ID
+StudentNumber <- paste("SN",1001:1012,  sep="")
+StudentNumber
+Grade <- c(78:83,91:93, 96:98)
+Grade
+YearLevel <- rep(1:4, each = 3)
+YearLevel
+student_data  <- data.frame(ID,StudentNumber,Grade,YearLevel)
+View(student_data)
 
 # Create the Dataframe
 student_data <- data.frame(
@@ -6,6 +16,21 @@ student_data <- data.frame(
   Grade <- c(78,79,80,81,82,83,91,92,93,96,97,98),
   YearLevel <- c(1,1,1,2,2,2,3,3,3,4,4,4)
 )
+
+data1 <- data.frame(
+  ID <- c(1:12),
+  StudentNumber <- c("SN1001","SN1002","SN1003","SN1004","SN1005","SN1006","SN1007","SN1008","SN1009","SN1010","SN1011","SN1012")
+)
+
+data2 <- data.frame(
+  Grade <- c(78,79,80,81,82,83,91,92,93,96,97,98),
+  YearLevel <- c(1,1,1,2,2,2,3,3,3,4,4,4)
+)
+
+student_data <- cbind(data1,data2)
+student_data1 <- cbind(data1[1:2],data2[1:2])
+View(student_data1)
+ls()
 names(student_data) <- c("ID","StudentNumber","Grade","YearLevel")
 #View(student_data)
 

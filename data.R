@@ -9,8 +9,8 @@ typeof(c)
 
 list(a)
 
+# Logical Vectors / Subscripts
 a[c(2,4)]
-
 a <- c(1:20)
 a [c(a > 8) || a < 6]
 a [c(a > 8)]
@@ -30,6 +30,8 @@ map_data <- data.frame(
     )
 
 # combine dataframe
+# rbind = row
+# cbind = col
 new_data <- rbind(map_data, new_data)
 
 sale_data <- data.frame(
@@ -68,6 +70,8 @@ View(sales_data)
 high_sales_data <- sales_data[sales_data$Sales > 120,]
 View(high_sales_data)
 
+
+# Creating Plots
 install.packages("ggplot2")
 library(ggplot2)
 
